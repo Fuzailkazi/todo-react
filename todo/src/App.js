@@ -34,6 +34,11 @@ function App() {
           ref={inputTask}
           type='text'
           placeholder='Task'
+          onKeyDown={(e) => {
+            if (e.keyCode == 13) {
+              addTask();
+            }
+          }}
           onChange={(e) => {
             setCurrentTask(e.target.value);
           }}
